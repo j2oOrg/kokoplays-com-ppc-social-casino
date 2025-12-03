@@ -3,214 +3,300 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Play — JackpotHub.cloud</title>
-  <meta name="description" content="Play free-to-play social casino style demos on JackpotHub.cloud. No real-money gambling or prizes. 18+ only.">
+  <title>Play — Kokoplays</title>
+  <meta name="description" content="Play free-to-play social casino style experiences on Kokoplays. No real-money gambling or prizes. 18+ only.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
 :root{
-  --bg: #060a14;
-  --panel: rgba(255,255,255,0.05);
-  --panel-strong: rgba(255,255,255,0.08);
-  --text: #e9eeff;
-  --muted: #b7c2db;
-  --heading: #fdf6ff;
-  --accent: #f5c452;
-  --accent-2: #70f0c7;
-  --border: rgba(255,255,255,0.12);
-  --radius: 14px;
-  --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
-  --font-body: "Poppins", "Inter", system-ui, sans-serif;
-  --shadow: 0 24px 70px rgba(0,0,0,0.5);
+  --bg:#0b1221;
+  --bg-2:#0b1529;
+  --panel:rgba(255,255,255,0.05);
+  --panel-strong:rgba(255,255,255,0.12);
+  --text:#e8edf7;
+  --muted:#b7c6d8;
+  --heading:#f6f8ff;
+  --accent:#6de1c0;
+  --accent-2:#ffb86c;
+  --border:rgba(255,255,255,0.14);
+  --radius:14px;
+  --shadow:0 30px 90px rgba(0,0,0,0.45);
+  --font-heading:"Sora","Inter",system-ui,sans-serif;
+  --font-body:"Manrope","Inter",system-ui,sans-serif;
 }
-
 *{box-sizing:border-box}
-body{
+body.page-frame-z4mn{
   margin:0;
   font-family:var(--font-body);
   background:
-    radial-gradient(circle at 15% 10%, rgba(112,240,199,0.08), transparent 28%),
-    radial-gradient(circle at 80% 8%, rgba(245,196,82,0.12), transparent 30%),
-    linear-gradient(140deg, #070c19, #050812 60%, #0b1021);
+    radial-gradient(circle at 20% 14%, rgba(109,225,192,0.12), transparent 30%),
+    radial-gradient(circle at 80% 8%, rgba(255,184,108,0.16), transparent 32%),
+    linear-gradient(135deg, var(--bg), #090f1c 50%, #0a1829);
   color:var(--text);
   line-height:1.65;
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
 }
-a{color:var(--accent-2); text-decoration:none; transition:color .18s, opacity .18s}
-a:hover{color:var(--accent); opacity:0.9}
-.link-accent{color:var(--accent); font-weight:700}
-.link-accent:hover{color:var(--accent-2)}
+a{color:var(--accent); text-decoration:none; transition:color .18s ease, opacity .18s ease}
+a:hover{color:var(--accent-2); opacity:0.9}
 img{max-width:100%; display:block}
+.wrap-r2jx{width:min(1160px, 100% - 2.4rem); margin:0 auto}
 
-.container{width:min(1140px, 100% - 2rem); margin:0 auto}
-
-.notice-banner{
-  background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#031017;
+.notice-bar-p5hz{
+  background:linear-gradient(120deg, var(--accent-2), var(--accent));
+  color:#081221;
   padding:0.55rem 0;
-  text-align:center;
   font-weight:700;
-  border-bottom:1px solid rgba(0,0,0,0.2);
-  box-shadow:0 10px 28px rgba(0,0,0,0.35);
+  letter-spacing:0.2px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
   position:relative;
-  z-index:70;
+  z-index:80;
 }
-.banner-inner{
+.notice-inner-k6yr{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:0.65rem;
+  gap:0.7rem;
   flex-wrap:wrap;
-  font-size:0.97rem;
+  font-size:0.98rem;
 }
-.banner-pill{
-  background:rgba(0,0,0,0.12);
-  color:#031017;
-  padding:0.35rem 0.7rem;
+.banner-pill-j4rm{
+  display:inline-flex;
+  align-items:center;
+  gap:0.35rem;
+  padding:0.3rem 0.75rem;
   border-radius:999px;
+  background:rgba(0,0,0,0.16);
+  color:#081221;
   font-weight:800;
-  letter-spacing:0.5px;
+  letter-spacing:0.6px;
 }
 
-.jackpothub-cloud-nav{
-  background:rgba(6,10,20,0.92);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(14px);
+.nav-bar-e8ps{
   position:sticky;
   top:0;
-  z-index:60;
-  padding:0.85rem 0;
+  z-index:70;
+  background:rgba(11,18,33,0.9);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(14px);
+  padding:0.9rem 0;
 }
-.jackpothub-cloud-nav .navbar-brand{
-  display:flex;
-  align-items:center;
-  gap:0.65rem;
-  padding:0;
-}
-.brand-logo{
-  width:132px;
+.brand-mark-i9tf{
+  width:124px;
   height:auto;
-  display:block;
   border-radius:12px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.45);
+  box-shadow:0 12px 32px rgba(0,0,0,0.45);
 }
-.jackpothub-cloud-nav .nav-link{
-  color:var(--text);
+.nav-link-q8ws{
+  color:var(--text)!important;
   font-weight:600;
-  margin:0 0.35rem;
-  padding:0.35rem 0.65rem;
+  padding:0.4rem 0.7rem!important;
   border-radius:10px;
   transition:background .15s, color .15s;
 }
-.jackpothub-cloud-nav .nav-link.active,
-.jackpothub-cloud-nav .nav-link:hover{
+.nav-link-q8ws:hover,
+.nav-link-q8ws.active{
   background:var(--panel);
-  color:var(--accent);
+  color:var(--accent)!important;
 }
-.navbar-toggler{
-  border:1px solid var(--border);
-  color:var(--text);
-}
-.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(112,240,199,0.18)}
-
-.jackpothub-cloud-btn{
+.cta-btn-f9lt{
   display:inline-flex;
   align-items:center;
-  justify-content:center;
   gap:0.4rem;
-  padding:0.78rem 1.6rem;
+  padding:0.78rem 1.45rem;
   border-radius:12px;
   font-weight:700;
   border:1px solid transparent;
   cursor:pointer;
   transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
-  text-decoration:none;
 }
-.jackpothub-cloud-btn.primary{
+.cta-btn-f9lt.primary{
   background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#060a14;
-  box-shadow:0 14px 36px rgba(0,0,0,0.4);
+  color:#0a0f1b;
+  box-shadow:0 16px 34px rgba(0,0,0,0.45);
 }
-.jackpothub-cloud-btn.primary:hover{transform:translateY(-2px)}
-.jackpothub-cloud-btn.outline{
+.cta-btn-f9lt.primary:hover{transform:translateY(-2px)}
+.cta-btn-f9lt.ghost{
   background:var(--panel);
-  border-color:var(--border);
+  border:1px solid var(--border);
   color:var(--text);
 }
-.jackpothub-cloud-btn.outline:hover{color:var(--accent)}
+.cta-btn-f9lt.ghost:hover{color:var(--accent)}
 
-.section-title{
+.hero-zone-w3lk{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(3rem, 6vw, 4.6rem) 0 2.2rem;
+}
+.hero-zone-w3lk::before,
+.hero-zone-w3lk::after{
+  content:"";
+  position:absolute;
+  width:520px; height:520px;
+  border-radius:50%;
+  filter:blur(140px);
+  opacity:0.32;
+  z-index:0;
+}
+.hero-zone-w3lk::before{top:-180px; left:-120px; background:radial-gradient(circle, rgba(109,225,192,0.4), transparent 60%)}
+.hero-zone-w3lk::after{bottom:-200px; right:-160px; background:radial-gradient(circle, rgba(255,184,108,0.36), transparent 60%)}
+.hero-grid-x9vm{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.4rem;
+  text-align:center;
+}
+.eyebrow-a1ts{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:0.78rem;
+  color:var(--muted);
+  margin:0 0 0.3rem;
+}
+.hero-title-f0sa{
   font-family:var(--font-heading);
   color:var(--heading);
-  font-size:2.1rem;
-  margin:0 0 0.45rem;
+  font-size:2.5rem;
+  line-height:1.08;
+  margin:0 0 0.55rem;
 }
-.section-sub{margin:0 0 1rem; color:var(--muted)}
-
-.jackpothub-cloud-play{
-  padding:3.5rem 0;
-  text-align:center;
+.hero-sub-g1va{
+  color:var(--muted);
+  margin:0 auto;
+  max-width:760px;
 }
-.game-wrapper{
-  margin:2rem auto;
+.hero-actions-c6te{
   display:flex;
   justify-content:center;
+  gap:0.8rem;
+  flex-wrap:wrap;
+  margin-top:1.1rem;
 }
-.game-wrapper > .w-100{
-  width:100%;
-  max-width:920px;
+.hero-badges-j3nb{
+  display:flex;
+  justify-content:center;
+  gap:0.6rem;
+  flex-wrap:wrap;
+}
+.tag-pill-o2sk{
+  display:inline-flex;
+  align-items:center;
+  gap:0.35rem;
+  padding:0.4rem 0.85rem;
+  border-radius:999px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--muted);
+  font-weight:700;
+}
+.tag-pill-o2sk.accent{
+  background:rgba(255,184,108,0.16);
+  color:var(--accent-2);
+  border-color:rgba(255,184,108,0.5);
+}
+
+.section-block-f0as{
+  padding:3.2rem 0;
+}
+.section-head-v7ar{
   text-align:center;
+  margin-bottom:1.4rem;
 }
-.game-frame{
+.section-title-c5lx{
+  font-family:var(--font-heading);
+  color:var(--heading);
+  font-size:2.05rem;
+  margin:0 0 0.35rem;
+}
+.section-sub-h9nm{
+  color:var(--muted);
+  margin:0;
+}
+
+.pill-h3vz{
+  display:inline-flex;
+  align-items:center;
+  gap:0.35rem;
+  padding:0.4rem 0.8rem;
+  border-radius:999px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--muted);
+  font-weight:600;
+  font-size:0.95rem;
+}
+.pill-h3vz.accent{
+  background:rgba(255,184,108,0.14);
+  color:var(--accent-2);
+  border-color:rgba(255,184,108,0.4);
+}
+
+.game-grid-y4sn{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  gap:1.4rem;
+}
+.game-card-b2hp{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:1rem;
+  box-shadow:var(--shadow);
+}
+.game-frame-m7ac{
   position:relative;
   width:100%;
-  max-width:920px;
-  border-radius:14px;
+  border-radius:12px;
   overflow:hidden;
-  background:linear-gradient(160deg, rgba(245,196,82,0.14), rgba(112,240,199,0.08));
+  background:linear-gradient(160deg, rgba(255,184,108,0.16), rgba(109,225,192,0.12));
   border:1px solid var(--border);
   box-shadow:0 16px 40px rgba(0,0,0,0.45);
 }
-.game-frame::before{content:""; display:block; padding-top:56.25%;}
-.game-frame iframe{
+.game-frame-m7ac::before{content:""; display:block; padding-top:56.25%;}
+.game-frame-m7ac iframe{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   border:0;
 }
-.game-caption{
-  margin-top:0.5rem;
+.game-caption-z3wb{
+  margin:0.5rem 0 0;
   color:var(--muted);
   font-weight:600;
 }
 
-.jackpothub-cloud-footer{
-  background:rgba(6,10,20,0.95);
+.site-footer-q1md{
+  background:rgba(11,18,33,0.95);
   color:var(--text);
   text-align:center;
-  padding:3.2rem 1rem 2.4rem;
+  padding:3rem 1rem 2.3rem;
   border-top:1px solid var(--border);
   position:relative;
   overflow:hidden;
 }
-.jackpothub-cloud-footer::before{
+.site-footer-q1md::before{
   content:"";
   position:absolute;
   inset:0;
-  background:radial-gradient(circle at 50% 20%, rgba(245,196,82,0.04), transparent 65%);
+  background:radial-gradient(circle at 50% 20%, rgba(255,184,108,0.06), transparent 65%);
   z-index:0;
 }
-.jackpothub-cloud-footer .container{position:relative; z-index:1}
-.footer-brand{
+.site-footer-q1md .wrap-r2jx{position:relative; z-index:1}
+.footer-brand-h8ov{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:0.7rem;
   margin-bottom:1rem;
 }
-.footer-links{
+.footer-links-k0fn{
   display:flex;
   justify-content:center;
   gap:0.85rem;
@@ -219,40 +305,37 @@ img{max-width:100%; display:block}
   margin:0 0 1rem;
   list-style:none;
 }
-.footer-links a{
+.footer-links-k0fn a{
   color:var(--accent);
   font-weight:600;
 }
-.footer-links a:hover{color:var(--accent-2)}
-.footer-copy{
-  color:var(--muted);
-  margin:0;
-}
+.footer-links-k0fn a:hover{color:var(--accent-2)}
+.footer-copy-q4pz{color:var(--muted); margin:0}
 
-.jackpothub-cloud-scroll{
+.scroll-btn-l6dy{
   position:fixed;
   right:22px;
   bottom:22px;
-  width:44px;
-  height:44px;
+  width:46px;
+  height:46px;
   border-radius:50%;
   border:none;
   background:var(--accent);
-  color:#060a14;
+  color:#0a0f1b;
   display:flex;
   align-items:center;
   justify-content:center;
   cursor:pointer;
-  box-shadow:0 14px 34px rgba(0,0,0,0.55);
+  box-shadow:0 16px 38px rgba(0,0,0,0.55);
   opacity:0;
   visibility:hidden;
   transition:all .16s;
   z-index:90;
 }
-.jackpothub-cloud-scroll.show{opacity:1; visibility:visible}
-.jackpothub-cloud-scroll:hover{background:var(--accent-2)}
+.scroll-btn-l6dy.show{opacity:1; visibility:visible}
+.scroll-btn-l6dy:hover{background:var(--accent-2)}
 
-.sr-only{
+.sr-only-s6pk{
   position:absolute;
   width:1px;
   height:1px;
@@ -264,82 +347,94 @@ img{max-width:100%; display:block}
 }
 
 @media (max-width: 768px){
-  .game-frame{max-width:100%}
-  .jackpothub-cloud-nav{padding:0.75rem 0}
+  .hero-title-f0sa{font-size:2.1rem}
+  .nav-bar-e8ps{padding:0.8rem 0}
 }
 @media (max-width: 576px){
-  .brand-logo{width:114px}
+  .hero-actions-c6te{flex-direction:column}
+  .brand-mark-i9tf{width:112px}
 }
   </style>
 </head>
-<body class="jackpothub-cloud jackpothub-cloud-o9e2">
+<body class="page-frame-z4mn">
 
-<!-- Persistent responsible-play banner -->
-<div class="notice-banner notice-banner-d4v6">
-  <div class="container container-n5s9 banner-inner banner-inner-e0g3">
-    <span class="banner-pill banner-pill-u5l2">18+</span>
-    <span>JackpotHub is a free-to-play social casino experience. No real-money gambling or prizes. 18+ only. Please play responsibly.</span>
+<div class="notice-bar-p5hz">
+  <div class="wrap-r2jx notice-inner-k6yr">
+    <span class="banner-pill-j4rm">18+</span>
+    <span>Kokoplays is a free-to-play social casino style experience. No deposits or prizes. 18+ only. Please play responsibly.</span>
   </div>
 </div>
 
-<!-- Header / navigation -->
-<nav class="navbar navbar-h1d6 navbar-expand-lg navbar-expand-lg-x1e0 jackpothub-cloud-nav jackpothub-cloud-nav-s2b8">
-  <div class="container container-n5s9 d-flex d-flex-l2v1 align-items-center align-items-center-i0e4 justify-content-between justify-content-between-u9t9">
-    <a class="navbar-brand navbar-brand-e4n4" href="/">
-      <img class="brand-logo brand-logo-y2l5" src="../assets/img.png" alt="JackpotHub logo">
-      <span class="sr-only sr-only-l6n5">JackpotHub.cloud</span>
+<nav class="navbar navbar-expand-lg nav-bar-e8ps">
+  <div class="wrap-r2jx d-flex align-items-center justify-content-between">
+    <a class="navbar-brand p-0" href="/">
+      <img class="brand-mark-i9tf" src="../assets/img.png" alt="Kokoplays logo">
+      <span class="sr-only-s6pk">Kokoplays</span>
     </a>
-    <button class="navbar-toggler navbar-toggler-s3p3" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon navbar-toggler-icon-k8w2"><i class="fas fas-i3o7 fa-bars fa-bars-k2s8"></i></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
     </button>
 
-    <div class="collapse collapse-s1p8 navbar-collapse navbar-collapse-u8n2 justify-content-end justify-content-end-q4o3" id="navMenu">
-      <ul class="navbar-nav navbar-nav-s2k8 mb-2 mb-2-s6k8 mb-lg-0 mb-lg-0-w4j8 align-items-lg-center align-items-lg-center-u1g7">
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/">Home</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4 active active-o1t1" href="/play">Play</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/#contact">Contact</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/disclaimer">Disclaimer</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/privacy-policy">Privacy</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/terms-and-conditions">Terms</a></li>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link nav-link-q8ws" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-q8ws active" href="/play">Play</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-q8ws" href="/#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-q8ws" href="/disclaimer">Disclaimer</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-q8ws" href="/privacy-policy">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-q8ws" href="/terms-and-conditions">Terms</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<main>
-  <!-- Play gallery of external demos -->
-  <section class="jackpothub-cloud-play jackpothub-cloud-play-n0x6">
-    <div class="container container-n5s9">
-      <h1 class="section-title section-title-a7o7">Play demos</h1>
-      <p class="section-sub section-sub-x7g6">Free-to-play social casino style experiences. External embeds, no deposits or prizes.</p>
+<!-- HERO -->
+<section class="hero-zone-w3lk">
+  <div class="wrap-r2jx hero-grid-x9vm text-center">
+    <p class="eyebrow-a1ts">Playable set — no downloads</p>
+    <h1 class="hero-title-f0sa">Curated Kokoplays experiences ready to launch in-browser.</h1>
+    <p class="hero-sub-g1va">
+      Free-to-play, social casino style capsules. External launches, no deposits or prizes, crafted for adults 18+.
+    </p>
+    <div class="hero-badges-j3nb">
+      <span class="tag-pill-o2sk accent"><i class="fa-solid fa-bolt"></i> Instant start</span>
+      <span class="tag-pill-o2sk"><i class="fa-solid fa-mobile-screen"></i> Mobile ready</span>
+      <span class="tag-pill-o2sk"><i class="fa-solid fa-shield-halved"></i> 18+ only</span>
+    </div>
+  </div>
+</section>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Live preview</div>
-          <div class="game-frame game-frame-d2c1">
+<main>
+  <section class="section-block-f0as">
+    <div class="wrap-r2jx">
+      <div class="section-head-v7ar">
+        <h2 class="section-title-c5lx">Playable collection</h2>
+        <p class="section-sub-h9nm">Free-to-play, social casino style previews. External embeds with no deposits or prizes.</p>
+      </div>
+
+      <div class="game-grid-y4sn">
+        <div class="game-card-b2hp">
+          <div class="pill-h3vz accent mb-2">Live view</div>
+          <div class="game-frame-m7ac">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=stadiumofriches&lang=en_GB&practice=1&channel=desktop&demo=2&refresh=1763688384036" title="Stadium of Riches" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Stadium of Riches (external launch).</p>
+          <p class="game-caption-z3wb">Embedded experience: Stadium of Riches (external launch).</p>
         </div>
-      </div>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Mobile-friendly preview</div>
-          <div class="game-frame game-frame-d2c1">
+        <div class="game-card-b2hp">
+          <div class="pill-h3vz accent mb-2">Mobile view</div>
+          <div class="game-frame-m7ac">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ringsofprosperity&lang=en_GB&practice=1&channel=mobile&demo=2&refresh=1763688502976" title="Rings of Prosperity" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Rings of Prosperity (external launch).</p>
+          <p class="game-caption-z3wb">Embedded experience: Rings of Prosperity (external launch).</p>
         </div>
-      </div>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Low-motion preview</div>
-          <div class="game-frame game-frame-d2c1">
+        <div class="game-card-b2hp">
+          <div class="pill-h3vz accent mb-2">Low-motion view</div>
+          <div class="game-frame-m7ac">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=lawnndisorder&lang=en_GB&practice=1&channel=mobile&demo=2&refresh=1763688570336" title="Lawn n Disorder" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Lawn n Disorder (external launch).</p>
+          <p class="game-caption-z3wb">Embedded experience: Lawn n Disorder (external launch).</p>
         </div>
       </div>
     </div>
@@ -347,14 +442,14 @@ img{max-width:100%; display:block}
 </main>
 
 <!-- Footer -->
-<footer class="jackpothub-cloud-footer jackpothub-cloud-footer-e3t4">
-  <div class="container container-n5s9">
-    <div class="footer-brand footer-brand-b0c2">
-      <img class="brand-logo brand-logo-y2l5" src="../assets/img.png" alt="JackpotHub logo">
-      <span class="sr-only sr-only-l6n5">JackpotHub.cloud</span>
+<footer class="site-footer-q1md">
+  <div class="wrap-r2jx">
+    <div class="footer-brand-h8ov">
+      <img class="brand-mark-i9tf" src="../assets/img.png" alt="Kokoplays logo">
+      <span class="sr-only-s6pk">Kokoplays</span>
     </div>
 
-    <ul class="footer-links footer-links-o9a5">
+    <ul class="footer-links-k0fn">
       <li><a href="/">Home</a></li>
       <li><a href="/play">Play</a></li>
       <li><a href="/#contact">Contact</a></li>
@@ -363,14 +458,14 @@ img{max-width:100%; display:block}
       <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
     </ul>
 
-    <p class="footer-copy footer-copy-f9e9">
-      © <span data-year></span> JackpotHub.cloud
+    <p class="footer-copy-q4pz">
+      © <span data-year></span> Kokoplays
     </p>
   </div>
 </footer>
 
-<button id="hubScrollTop" class="jackpothub-cloud-scroll jackpothub-cloud-scroll-b6z2" aria-label="Scroll to top">
-  <i class="fas fas-i3o7 fa-chevron-up fa-chevron-up-v5k2"></i>
+<button id="hubScrollTop" class="scroll-btn-l6dy" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
 </button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
